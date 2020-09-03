@@ -1,0 +1,87 @@
+'#rowGallery' : {
+	height : '92',
+	selected: false
+	//backgroundColor: 'red'
+},		
+'#mainHolder':{
+	layout: 'horizontal',
+	height : '92',
+    width : '100%',
+    zIndex: 1,
+    backgroundColor: '#FFFFFF'
+},
+'#thumbHolder':{
+	width : '100',
+	height : '92'
+},
+'#thumbImg':{
+	top : '5',
+	left : '5'	
+},
+'#txtHolder':{
+	layout : 'vertical',
+	left:'0',
+	right: '0',
+	top: '0',
+	bottom: '0',
+	height : '92'	
+},
+'#txtCaption':{
+	height : Ti.UI.FILL,
+	left: '5',
+	font : {
+		fontSize : '15'
+	},
+	color : '#000'
+},
+'#actionHolder':{
+	layout : 'vertical',
+	top: '0',
+	height : Ti.UI.FILL,
+	width : '94',
+	backgroundColor: '#FFF'
+},
+'.iconContainer':{
+	top:"23",
+	height: Ti.UI.SIZE,
+	width: '94',
+	layout:"horizontal",
+	backgroundColor: '#FFF'
+},
+'.formatIcon':{
+	backgroundColor: 'white',
+	backgroundImage: 'none',
+	borderWidth: '0',
+	borderColor: 'transparent',
+	height: '45',
+	width: '44'
+},
+'#pencilIcon':{
+	image: '/images/Pencil.png',
+	left: '2',
+	id: 'editor',
+	sourceType: 'EditImageRow'
+},
+'#deleteIcon':{
+	image: '/images/icon_del.png',
+	left: '4',
+	id: 'editor'
+},
+// '#addSumaryIcon':{
+	// image: '/images/addSummary100.png',
+	// left: '4',
+	// id: 'editor'
+// },
+'#addSumaryIcon':{
+	image: '/images/addSummary.png',
+	left: '4',
+	right: '0',
+	id: 'editor'
+},
+'#rightSwipeContainer': {
+	height: Ti.UI.FILL,
+	right: 0,
+	zIndex: 0,
+	backgroundColor: 'white',
+	layout:'horizontal'
+}

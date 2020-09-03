@@ -1,0 +1,16 @@
+"Window":{
+	layout:"Composite"
+}
+"Window[platform=android]":{
+	backgroundColor:'#fff'
+}
+
+".col-item[platform=android]": {
+	layout:'composite',
+	width:'12.5%',
+}
+
+".col-item[platform=ios]": {
+	layout:'composite',
+	width:'14.28%',
+}

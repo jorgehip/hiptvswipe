@@ -1,0 +1,13 @@
+{
+	"id": "GalleryItem",
+	"name": "GalleryItem",
+	"description" : "Row componnet to show Gallery Photos with swipe events",
+	"author": "HIP Mobile",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2018",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"ios,android"
+}

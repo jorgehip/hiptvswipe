@@ -1,0 +1,11 @@
+<Alloy>
+    <Tab title="Manage" icon="/images/manageTab.png" module="tabGroup" activeColor="#fff" backgroundActiveColor="#00345e" backgroundColor="#0066ac" titleColor="#fff">
+        <Window title="Manage" module="tabGroup" id="manageWindow">
+
+            <Label>Enter the file name to save the inspection to (ex. John Smith - 1234 My Street). Note: If you enter in an existing name it will overwrite the existing file. When you're done with the inspection go to the Sync tab to upload it to the cloud.</Label>
+            <View top="10" height="Ti.UI.SIZE">
+                <Button left="0"  width="48%" title="Create" onClick="openTemplate" class="button"/>
+            </View>
+        </Window>
+    </Tab>
+</Alloy>

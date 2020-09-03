@@ -1,0 +1,80 @@
+"Window": {
+	backgroundColor: '#D5D5D5',
+	layout: "vertical",
+	barColor: '#0067ac',
+	navTintColor: '#fff',
+	titleAttributes: {
+		color: "#FFFFFF"
+	}
+},
+"Window[platform=ios]":{
+	statusBarStyle: Ti.UI.iOS.StatusBar.LIGHT_CONTENT
+},
+"ScrollView":{
+	layout: "vertical"
+},
+".container": {
+	left: 10,
+	right: 10,
+	top: 5,
+	layout: "vertical",
+	height:Titanium.UI.SIZE
+},
+".container-seperator": {
+	top: 10,
+	bottom: 10,
+	backgroundColor: '#c1bec0',
+	height:Ti.UI.SIZE
+},
+".row": {
+	width: '100%',
+	height: Ti.UI.SIZE,
+	layout: 'horizontal',
+	horizontalWrap: 'false'
+},
+".col": {
+	layout: 'composite',
+	width: '33.33%'
+},
+".col-4": {
+	layout: 'composite',
+	width: '25%'
+},
+".col-5":{
+	layout: 'composite',
+	width: '20%'
+},
+".fa-icon": {
+	backgroundImage: "none",
+	color: '#fff',
+	font: {
+		fontSize: '28dp'
+	}
+},
+".fa-icon[platform=android]": {
+	font: {
+		fontSize: '20sp'
+	},
+	//borderColor: "#FFF",
+	//borderWidth: 1
+},
+"Label":{
+	top: 5,
+	bottom: 5,
+	height:Ti.UI.SIZE,
+	color: '#0e0c0e',
+	width: Titanium.UI.FILL,
+	textAlign: "left",
+	font: {
+		fontSize: 13,
+		fontFamily: 'verdana,arial,sans-serif'
+	}
+},
+".seperator-label":{
+	top: 5,
+	bottom: 5,
+	left: 10,
+	right: 10,
+	color: "#464345",
+	height:Titanium.UI.SIZE
+},

@@ -1,0 +1,77 @@
+"Window":{
+	title: "Edit Window",
+	layout:"composite",
+},
+
+"Toolbar[platform=ios]":{
+	barColor:'#0067ac',
+	tintColor : '#fff',
+	titleAttributes : {
+		color : "#FFFFFF",
+		font: {
+			fontSize: 18,
+			fontFamily: 'verdana,arial,sans-serif'
+		}		
+	},	
+}
+"TextArea":{
+	value: "",
+	top: 55,
+	bottom: 55,
+	left: 10,
+	right: 10,
+	color: '#000',
+	borderStyle: Titanium.UI.INPUT_BORDERSTYLE_NONE,
+	font: {
+		fontSize: Alloy.Globals.fontSizeVal
+	},
+	borderWidth : 1,
+	borderColor : '#bbb'
+},
+"Button[platform=android]":{
+	height: 40,
+	color:'#fff',
+	backgroundColor: '#2b8ec7',
+	font : {
+		fontWeight : 'bold'
+	}
+},
+"#saveBtn[platform=android]":{
+	title: 'Save',
+	right: 10
+},
+"#closeBtn[platform=android]":{
+	title: 'Cancel',
+	left: 10
+},
+"#listBtn[platform=android]":{
+	title: 'List',
+	//right: 125
+
+},
+"#commentField[platform=ios]":{
+	top :50
+}
+".swatch": {
+    left: 0,
+    width: 30,
+    height: 30,
+    borderColor: "black",
+    backgroundColor: "black"
+},
+
+
+".combobox": {
+    left: 5, 
+    right: 0,
+    width : Ti.UI.FILL, 
+    height: 40, 
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE, 
+    hintText: 'Select a Color',
+    dropButton: {
+        color: "black",
+        selectedColor: "yellow",
+        //style: Titanium.UI.iOS.SystemButtonStyle.PLAIN
+    }     
+}
+

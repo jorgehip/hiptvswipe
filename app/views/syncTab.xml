@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Sync" icon="/images/syncTab.png" module="tabGroup" activeColor="#fff" backgroundActiveColor="#00345e" backgroundColor="#0066ac" titleColor="#fff">
+        <Window title="Sync" module="tabGroup" >
+            <Button right="0" width="48%" title="Download" onClick="doDownloading"></Button>
+        </Window>
+    </Tab>
+</Alloy>

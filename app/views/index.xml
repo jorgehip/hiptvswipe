@@ -1,0 +1,7 @@
+<Alloy>
+    <TabGroup id="tabGroup" onFocus="onFocus" onOpen="onOpen" module="tabGroup">
+        <Require src="syncTab" id="syncTab"/>
+        <Require src="manageTab" id="manageTab"/>   
+        <Require src="inspectTab" id="inspectTab"/> 
+    </TabGroup>
+</Alloy>

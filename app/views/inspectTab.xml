@@ -1,0 +1,13 @@
+<Alloy>
+    <Tab title="Inspect" icon="/images/inspectTab.png" id="inspectTab" module="tabGroup" activeColor="#fff" backgroundActiveColor="#00345e" backgroundColor="#0066ac" titleColor="#fff" >
+        <Window title="Inspect" id="inspectWindow" module="tabGroup" >
+            <View class="container-seperator" top=0>
+                <Label class="seperator-label" id="sessionId" textAlign="center">Here Goes Session ID</Label>
+            </View>
+            <TableView id="tableView" top="0" bottom="50" platform='ios' onClick="onRowClick" />
+            <TableView id="tableView" top="0" bottom="50" platform='android' onClick="onRowClick" />
+            
+        </Window>
+    </Tab>
+</Alloy>
+

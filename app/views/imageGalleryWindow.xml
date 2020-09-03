@@ -1,0 +1,9 @@
+<Alloy>
+    <Window title="Gallery" id="window" onClose="onClose">
+        <RightNavButton platform='ios'>
+            <Button class="fa-icon" icon="fa-reorder" onClick="toggleRowMoving"/>
+        </RightNavButton>
+        <TableView platform="ios" top="0" bottom="50" onMove="rearrangeImageRows" backgroundColor='#fff' id="tableView" onSingletap="tableViewOnClick" onSwipe="swipeRows"/>
+        <TableView platform="android" top="0" bottom="50" backgroundColor='#fff' id="tableView"   onSingletap="tableViewOnClick" onSwipe="swipeRows"/>
+    </Window>
+</Alloy>

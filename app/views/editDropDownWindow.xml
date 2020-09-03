@@ -1,0 +1,28 @@
+<Alloy>
+	<Window onOpen="onOpen" id="editDropDownWindow" title="Edit Comment" onClose="onClose">
+        <RightNavButton platform="ios">
+            <Button onClick="save" systemButton="Ti.UI.iOS.SystemButton.DONE" />
+        </RightNavButton>
+        <Toolbar platform="ios" borderTop="true" borderBottom="false" top="0" >
+            <!-- The Items tag sets the Toolbar.items property. -->
+            <Items>
+                <FlexSpace/>
+                <Button id="listBtnIOS"  systemButton="Ti.UI.iOS.SystemButton.BOOKMARKS"/>
+            </Items>
+        </Toolbar>
+        <ScrollView platform="ios" id="ScrollField" top="100" bottom="10">
+            <View layout="vertical" top='100' bottom="10" >
+            <TextArea scrollable="true" id="commentField" top="0"  onBlur="moveAreaDown" onFocus="moveAreaUp" bottom="0" onChange="valueChanged" keyboardToolbarColor="#E2E2E2" keyboardToolbarHeight="40">
+                <KeyboardToolbar>
+                    <Toolbar>
+                        <Items>
+                            <Button systemButton="FLEXIBLE_SPACE" />
+                            <Button systemButton="DONE" onClick="hideKeyboard" textField="commentField" />
+                        </Items>
+                    </Toolbar>
+                </KeyboardToolbar>
+            </TextArea>
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

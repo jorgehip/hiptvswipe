@@ -1,0 +1,41 @@
+".container": {
+	backgroundColor:"gray",
+	layout: 'vertical'
+}
+".btn" : {
+	height: 40
+}
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}
+
+".col-item[platform=android]": {
+	layout:'composite',
+	width:'12.5%',
+}
+
+".col-item[platform=ios]": {
+	layout:'composite',
+	width:'14.28%',
+}
+
+"Window":{
+	layout:"Composite"
+}
+"Window[platform=android]":{
+	backgroundColor:'#fff'
+}
+
+"TabGroup[platform=ios]":{
+	tabsBackgroundColor : '#0067ac',
+	tabsTintColor:"#fff",
+	tintColor:"#000"
+}

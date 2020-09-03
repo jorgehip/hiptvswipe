@@ -1,0 +1,5 @@
+<Alloy>
+    <View backgroundColor="#0067ac" id="view">
+        <Label  left="10" id="label"></Label>
+    </View>
+</Alloy>

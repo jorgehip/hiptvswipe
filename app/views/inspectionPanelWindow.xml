@@ -1,0 +1,29 @@
+<Alloy>
+    <Window  id="inspectionPanelWindow" onClose="onClose" title="Back">
+        <Button id='btn' top="30" onClick="nextBtn">nwext>></Button>
+        <TableView id="tableView" top="0" bottom="50"  onClick="onRowClick" />
+        <View bottom="0" height="50" left="0" right="0" class="row" backgroundColor='#0067ac' layout="horizontal" platform='ios'>
+            <View class="col-item">
+                <Button class="fa-icon" icon="fa-camera" onClick="takePicFromCamera" id="cameraBtn"/>
+            </View>
+            <View class="col-item" >
+                <Button icon="fa-film" class="fa-icon " onClick="saveVideo" id="videoBtn"/>
+            </View>
+            <View class="col-item">
+                <Button class="fa-icon" icon="fa-folder-o" onClick="showGallery" id="galleryBtn"/>
+            </View>
+            <Widget id="action" src="com.mattmcfarland.fontawesome"/>
+        </View>
+        <View bottom="0" height="50" left="0" right="0" class="row" backgroundColor='#0067ac' layout="horizontal" platform='android'>
+            <View class="col-item">
+                <ImageView image="/images/icons/ic_action_camera.png" onClick="takePicFromCamera" id="cameraBtn" height="Titanium.UI.FILL" width="Titanium.UI.SIZE"/>
+            </View>
+            <View class="col-item" >
+                <ImageView image="/images/icons/ic_action_film.png" onClick="saveVideo" id="videoBtn" height="Titanium.UI.FILL" width="Titanium.UI.SIZE"/>
+            </View>
+            <View class="col-item">
+                <ImageView image="/images/icons/ic_action_folder_open.png" onClick="showGallery" id="galleryBtn" height="Titanium.UI.FILL" width="Titanium.UI.SIZE"/>
+            </View>
+        </View>
+    </Window>
+</Alloy>

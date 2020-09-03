@@ -1,0 +1,7 @@
+<Alloy>
+    <Window  id="tabbedPanelWindow" onClose="onClose" onOpen="onOpen">
+        <TableView id="tableViewTP" onSingletap="throttledGoToInspectionPanel">
+            <SearchBar id="searchBar" backgroundColor='#fff' color='#000' onCancel="searchBarOnCancel"></SearchBar>
+        </TableView>    
+    </Window>
+</Alloy>

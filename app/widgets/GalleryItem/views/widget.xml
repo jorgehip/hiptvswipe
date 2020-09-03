@@ -1,0 +1,20 @@
+<Alloy>
+    <TableViewRow id="rowGallery">
+        <View id="mainHolder">
+            <View id="thumbHolder">
+                <ImageView id="thumbImg"/>
+            </View>
+            <View id="txtHolder">   
+                <Label id="txtCaption"/>        
+            </View>
+            <View id="actionHolder">
+                <View class="iconContainer">
+                    <Button id="pencilIcon" class="formatIcon"/>
+                    <Button id="addSumaryIcon" class="formatIcon"/>
+                    <!--<Button id="deleteIcon" class="formatIcon"/>-->
+                </View>
+            </View>
+        </View>
+        <View id='rightSwipeContainer'/>
+    </TableViewRow>
+</Alloy>

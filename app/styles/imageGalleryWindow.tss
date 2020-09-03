@@ -1,0 +1,11 @@
+"Window": {
+	layout:"composite"
+},
+".col-7-item": {
+	layout:'composite',
+	width:'14.285%',
+},
+".col-7-item[platform=ios]": {
+	layout:'composite',
+	width:'16.666%',
+}
