@@ -14,3 +14,12 @@
 	layout:'composite',
 	width:'14.28%',
 }
+"#searchBarInsP" : {
+  font: {
+    fontSize: 14
+  }
+}
+
+"#tableViewInsP[platform=ios]" : {
+  showVerticalScrollIndicator: false
+}

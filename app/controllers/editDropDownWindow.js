@@ -125,8 +125,63 @@ function moveAreaDown() {
     $.ScrollField.bottom = "10";
 }
 
+var hasPhotoLinkReg = /\s(\[\[ImageLink\]\]).*$/g;
 
+function hasPhotoLink(str) {
+    var match = str.match(hasPhotoLinkReg);
+    return match ? match[0] : false;
+}
+
+function replaceSpecialChars(_string) {
+    var tmpString = _string.split("&& ");
+    var repString = "";
+    for (var i = 0, j = tmpString.length; i < j; i++) {
+        if (i == 0) {
+            repString = repString + tmpString[i];
+        } else {
+            repString = repString + "~-~#" + tmpString[i];
+        }
+    }
+    return repString;
+}
+
+/**
+ * @private
+ * @method verifyArguments
+ * Checks if the string List is valid. If it is not valid, it is showing and alert.
+ * @param {value} - String, Text of narratives or comments.
+ * Return TRUE if the narrative has valid format
+ * Return False if the narragive doesn't has a valid format
+ * @return {Boolean}
+ */
+function verifyArguments(value) {
+    var ToContinue = true;
+    if (value.indexOf("<<") > -1 && value.indexOf(">>") > -1) {
+        //Valid list
+        ToContinue = true;
+    } else if (value.indexOf("<<") == -1 && value.indexOf(">>") == -1) {
+        //No list
+        ToContinue = true;
+    } else {
+        //Incomplete List
+        ToContinue = false;
+        alert("Your comment is missing a << or >> symbol at the start/end of your list. Please correct and save the narrative.");
+    }
+    return ToContinue;
+}
 function save(argument) {
+    if (hasPhotoLink($.commentField.value)) {
+        alert("Please remove [[ImageLink]] from comment");
+    } else if (verifyArguments($.commentField.value)) {
+        if (getAllLists($.commentField.value) == null) {
+            args.callback($.commentField.value);
+        } else {
+            //var newFomattedValue = $.commentField.value.replace(/&&/g, "~-~#");
+            var newFomattedValue = replaceSpecialChars($.commentField.value);
+            args.callback(newFomattedValue);
+        }
+        close();
+    }
     
 }
 

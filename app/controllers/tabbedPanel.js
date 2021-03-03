@@ -702,11 +702,15 @@ function goToInspectionPanel(e) {
             $.tabbedPanelWindow = null;
         };
         //doLog && console.log(LOG_TAG, ' nextArgs before to open: ', JSON.stringify(e));
-        var inspectionPanelWindow = Alloy.createController('inspectionPanelWindow', nextArgs).getView();
-        
-        args.containingTab.open(inspectionPanelWindow, {
-            //animated : true
-        });
+        try {
+	        	var inspectionPanelWindow = Alloy.createController('inspectionPanelWindow', nextArgs).getView();
+	        
+	        args.containingTab.open(inspectionPanelWindow, {
+	            //animated : true
+	        });
+        } catch (err) {
+        		console.log(JSON.stringify(err));
+        }
     }
     
 }
@@ -735,32 +739,4 @@ function destroyController() {
   // someController = null;  
 }
 
-
-doLog && console.log (LOG_TAG, ' orientation global ~~> isLands: : ', Alloy.Globals.isLandscape, ' isPort: ', Alloy.Globals.isPortrait);
-
-if (Alloy.Globals.countNarrativesPicturesSwitch) {
-    Alloy.Globals.events.on('orientationchange', function() {
-        
-        doLog && console.log(LOG_TAG, '~~~~~~~~~~~~~~~~~~~~~~~~~~ START ORIENTATION EVENT ()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-        //console.log('$$', Alloy.Globals.isLandscape, Alloy.Globals.isPortrait);
-        if (Alloy.Globals.isLandscape) {
-           
-                $.tableViewTP.setData([]);
-                destroyController();
-                drawInfo(-1);
-           
-            doLog && console.log(LOG_TAG, '**** 1.0 ****');
-
-        } else if (Alloy.Globals.isPortrait) {
-                $.tableViewTP.setData([]);
-                destroyController();
-                drawInfo(-1);
-                
-            doLog && console.log(LOG_TAG, '**** 1.1 ****');
-
-        }
-        
-        doLog && console.log(LOG_TAG, '~~~~~~~~~~~~~~~~~~~~~~~~~~ END ORIENTATION EVENT ()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-    });
-}
 
